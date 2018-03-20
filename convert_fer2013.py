@@ -7,7 +7,7 @@ header = csvr.next()
 rows = [row for row in csvr]
 
 trn = [row[:-1] for row in rows if row[-1] == 'Training']
-csv.writer(open('test.csv', 'w+')).writerows([header[:-1]] + trn)
+csv.writer(open('train.csv', 'w+')).writerows([header[:-1]] + trn)
 print len(trn)
 
 tst = [row[:-1] for row in rows if row[-1] == 'PublicTest']
